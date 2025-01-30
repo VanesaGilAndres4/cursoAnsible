@@ -4,7 +4,7 @@
   tasks:
     - name: Crear un directorio /tmp/ansible_multi
       file:
-        path: /tmp/ansible_multi/hola.txt
+        path: /tmp/ansible_multi
         state: directory
         mode: '0755'
 
@@ -13,8 +13,15 @@
         dest: /tmp/ansible_multi/hola.txt
         content: "Hola desde ansible"
         mode: '0644'
+
     - name: Comprobar si el servicio cron esta activo
       service: 
         name: cron
         state: started
+
+    - name: Fichero prueba test
+      copy: 
+        src: /tmp/test.txt
+        dest: /tmp/spiderman.txt
+    
     

@@ -1,12 +1,12 @@
 ---
 - name: Instalar paquete tree
   hosts: all
-  become: true
   tasks:
     - name: tree
       apt: 
         name: tree
         state: present
+      become: true
 
     - name: Verificar instalacion tree  
       command: tree --version

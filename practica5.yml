@@ -1,0 +1,20 @@
+---
+- name: Tareas multiples con ansible
+  hosts: all
+  tasks:
+    - name: Crear un directorio /tmp/ansible_multi
+      file:
+        path: /tmp/ansible_multi/hola.txt
+        state: directory
+        mode: '0755'
+
+    - name: Crear un archivo de texto
+      copy: 
+        dest: /tmp/ansible_multi/hola.txt
+        content: "Hola desde ansible"
+        mode: '0644'
+    - name: Comprobar si el servicio cron esta activo
+      service: 
+        name: cron
+        state: started
+    

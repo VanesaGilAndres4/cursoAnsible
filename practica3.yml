@@ -1,0 +1,20 @@
+---
+- name: Configurar permisos en archivos y directorios
+  hosts: all
+  tasks:
+    - name: Crear un directorio 
+      file:
+        path: /tmp/directorio_ansible
+        state: directory
+        mode: '0755'
+
+    - name: Crear un directorio dentro del directorio
+      file: 
+        path: /tmp/directorio_ansible/archivo.txt
+        state: touch
+        mode: '0644'
+
+    - name: Cambiar permisos del archivos
+      file: 
+        path: /tmp/directorio_ansible/archivo.txt
+        mode: '0600'

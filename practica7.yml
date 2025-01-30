@@ -1,0 +1,9 @@
+---
+- name: Crear un usuario en el nodo remoto
+  hosts: all
+  become: true
+  tasks:
+    - name: Crear un usuario 'ansible_user'
+      user:
+        name: ansible_user
+        state: present

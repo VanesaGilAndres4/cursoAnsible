@@ -1,0 +1,11 @@
+---
+- name: Instalar paquete tree
+  hosts: all
+  tasks:
+    - name: tree
+      apt: 
+        name: tree
+        state: present
+        
+    - name: Verificar instalacion tree  
+      command: tree --version

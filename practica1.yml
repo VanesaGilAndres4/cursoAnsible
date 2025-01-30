@@ -1,9 +1,12 @@
 ---
-- name: Crear directorios remotos
-  hosts: all
-  tasks:
-    - name: Crear un directorio en /tmp
-      file:
-        path: /tmp/directorio_ansible
-        state: directory
-        mode: '0755'
+- name: Nombre descriptivo del playbook
+  hosts: grupo_de_hosts
+  tasks: 
+    - name: Tarea 1
+      modulo:
+        parametro1: valor	
+        parametro2: valor
+    - name: Tarea 2
+      modulo: 
+        parametro1: valor
+        parametro2: valor

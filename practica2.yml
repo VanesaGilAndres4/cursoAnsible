@@ -1,0 +1,9 @@
+---
+- name: Crear directorios remotos
+  hosts: all
+  tasks:
+    - name: Crear un directorio en /tmp
+      file:
+        path: /tmp/directorio_ansible
+        state: directory
+        mode: '0755'

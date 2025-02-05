@@ -1,0 +1,20 @@
+---
+- name: Crear un usuario en el nodo remoto
+  hosts: all
+  become: true
+  tasks:
+    - name: 1. Crear un directorio con permisos personalizados
+      file:
+        path: /tmp/directorio_tareaclase4
+        state: directory
+        mode: '0775'
+
+    - name: 2. Crear un usuario específico
+      user:
+        name: user_tarea4
+        state: present
+
+    - name: 3. Instalar un paquete
+      apt: 
+        name: nginx
+        state: present

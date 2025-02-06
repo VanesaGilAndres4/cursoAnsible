@@ -1,5 +1,5 @@
 ---
-- name: Crear un usuario usando variables locales
+- name: Crear un usuario usando variables externas
   hosts: all
   become: yes
   vars_files:

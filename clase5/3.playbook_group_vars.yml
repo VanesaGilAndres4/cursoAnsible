@@ -1,0 +1,10 @@
+---
+- name: Crear un usuario usando un group vars
+  hosts: all
+  become: yes
+  tasks:
+    - name: Crear usuario con variables
+      user:
+        name: "{{ usuario }}"
+        home: "{{ directorio_home }}"
+        state: present

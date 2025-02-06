@@ -2,7 +2,7 @@
 ---
 - name: Crear un usuario usando variables locales
   hosts: all
-  become: ansible
+  become_user: ansible
   vars: 
     usuario: "ansible_user"
     directorio_home: "/home/ansible_user"

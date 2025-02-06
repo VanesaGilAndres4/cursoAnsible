@@ -1,0 +1,2 @@
+usuario: "ansible_user"
+directorio_home: "/home/ansible_user"

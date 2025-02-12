@@ -1,6 +1,6 @@
 ---
 - name: Crear un usuario e instalar un paquete usando un group vars
-  hosts: tareaclase5
+  hosts: all
   become: yes
   tasks:
     - name: Crear usuario con variables

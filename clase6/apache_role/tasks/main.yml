@@ -12,3 +12,8 @@
     enabled: yes
   notify: Reiniciar apache
 
+- name: Crear un fichero
+  file:
+    path: /tmp/prueba.txt
+    state: touch
+  notify: Mostrar mensaje test prueba1

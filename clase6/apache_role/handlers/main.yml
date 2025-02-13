@@ -3,3 +3,7 @@
   service: 
     name: apache2
     state: restarted
+
+- name: Mostgrar mensaje test prueba1
+  debug: 
+    msg: "El archivo se ha creado."

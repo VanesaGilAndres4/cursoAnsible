@@ -1,0 +1,6 @@
+---
+- name: Desplegar apache usando un rol
+  hosts: all
+  become: true
+  roles: 
+    - apache_role

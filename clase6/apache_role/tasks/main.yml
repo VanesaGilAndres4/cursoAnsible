@@ -9,11 +9,11 @@
   service: 
     name: apache2
     state: started
-    enabled: yes
+    enabled: no
   notify: Reiniciar apache
 
 - name: Crear un fichero
   file:
-    path: /tmp/prueba.txt
+    path: /tmp/prueba1.txt
     state: touch
   notify: Mostrar mensaje test prueba1

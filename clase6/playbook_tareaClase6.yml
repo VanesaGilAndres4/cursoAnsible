@@ -1,0 +1,6 @@
+---
+- name: Desplegar Nginx usando un rol
+  hosts: all
+  become: true
+  roles:
+    - tareaClase6_role

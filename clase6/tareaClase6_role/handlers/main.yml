@@ -1,2 +1,5 @@
 ---
-# handlers file for tareaClase6_role
+- name: Reiniciar Nginx
+  service: 
+    name: nginx
+    state: restarted

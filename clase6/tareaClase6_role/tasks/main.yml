@@ -1,2 +1,14 @@
 ---
 # tasks file for tareaClase6_role
+- name: Instalar Nginx
+  apt: 
+    name: nginx
+    state: present
+    update_cache: yes
+
+- name: Iniciar y habilitar el servicio Nginx
+  service: 
+    name: nginx
+    state: started
+    enabled: no
+  notify: Reiniciar nginx

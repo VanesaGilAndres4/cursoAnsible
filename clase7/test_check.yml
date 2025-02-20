@@ -8,3 +8,9 @@
         path: /tmp/ansible_check
         state: directory
         mode: '0755'
+      register: resultado 
+
+    - name: Mostrar mensaje de preuba  
+      debug: 
+        msg: "Esto es una prueba"
+      when: resultado.changed

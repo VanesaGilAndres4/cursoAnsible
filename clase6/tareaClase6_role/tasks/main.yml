@@ -10,5 +10,5 @@
   service: 
     name: nginx
     state: started
-    enabled: no
+    enabled: yes
   notify: Reiniciar nginx

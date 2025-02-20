@@ -1,0 +1,13 @@
+---
+- name: Ejemplo de debug
+  hosts: all
+  vars: 
+    mensaje: "Hola desde Ansible"
+  
+  tasks:
+    - name: Mostrar variable
+      debug: 
+        var: mensaje
+    - name: Mostrar mensaje personalizado
+      debug: 
+        msg: "La variable tiene el valor: {{ mensaje }}"

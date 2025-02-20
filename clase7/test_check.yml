@@ -1,0 +1,10 @@
+---
+- name: Crear un directorio de prueba
+  hosts: all
+  #become: true
+  tasks: 
+    - name: Crear directorio
+      file: 
+        path: /tmp/ansible_check
+        state: directory
+        mode: '0755'

@@ -14,6 +14,6 @@
 
 - name: Crear un fichero
   file:
-    path: /tmp/prueba1.txt
+    path: /tmp/prueba.txt
     state: touch
   notify: Mostrar mensaje test prueba1

@@ -1,8 +1,11 @@
 ---
 - name: Tarea clase 7 - Modo prueba y debug
   hosts: all
+  vars: "Esto es una prueba"
   tasks:
-    - name: Instalar apache
-      apt: 
-        name: apache2
-        state: present
+    - name: Mostrar variable
+      debug:
+        var: mensaje
+    - name: Mostrar mensaje personalizado 
+      debug: 
+        msg: "La variable tiene el valor: {{ mensaje }}"

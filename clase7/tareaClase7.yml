@@ -1,0 +1,8 @@
+---
+- name: Tarea clase 7 - Modo prueba y debug
+  hosts: all
+  tasks:
+    - name: Instalar apache
+      apt: 
+        name: apache
+        state: present

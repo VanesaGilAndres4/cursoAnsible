@@ -1,7 +1,7 @@
 ---
 - name: Proyecto final sencillo
   hosts: all
-  become: true
+  become: yes
   vars_files: 
     - variables.yml
   tasks:
@@ -9,6 +9,7 @@
     - name: 1. Crear usuarios 
       user:
         name: "{{ usuario }}"
+        home: "{{ directorio_home }}"
         state: present
 
 # Instalar paquetes

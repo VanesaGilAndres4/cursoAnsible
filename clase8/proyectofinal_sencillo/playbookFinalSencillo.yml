@@ -1,0 +1,18 @@
+---
+- name: Proyecto final sencillo
+  hosts: all
+  become: true
+  vars_files: variables.yml
+  tasks:
+# Crear usuario
+    - name: 1. Crear usuarios 
+      user:
+        name: {{ usuario }}
+        state: present
+
+# Instalar paquetes
+    - name: 2. Instalar un paquete
+      apt: 
+        name: {{ paquete }}
+        state: present
+        update_cache: yes

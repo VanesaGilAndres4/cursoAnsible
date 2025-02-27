@@ -1,0 +1,11 @@
+---
+- name: Instalar paquetes paquetes_basicos
+  apt: 
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items: "{{ paquetes_basicos }}"
+
+- name: Limpiar caché de apt
+  apt: 
+    autoclean: yes

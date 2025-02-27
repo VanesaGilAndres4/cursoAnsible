@@ -1,0 +1,5 @@
+---
+usuario_admin: admin_user
+usuario_estandar: estandar_user
+usuario_group: sudo
+usuario_shell: /bin/bash

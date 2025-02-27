@@ -1,0 +1,11 @@
+---
+- name: Limpiar archivos temporales
+  command: rm -rf "{{ directorio_temporal }}"
+
+- name: Borrar espacio en disco
+  command: df -PhT
+  register: espacio_disco
+
+- name: Mostrar información de espacio libre
+  debug: 
+    var: espacio_disco.stdout_lines

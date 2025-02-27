@@ -1,0 +1,9 @@
+---
+- name: Proyecto final de Ansible
+  hosts: all
+  become: true
+
+  roles: 
+    - usuarios
+    - paquetes
+    - mantenimiento

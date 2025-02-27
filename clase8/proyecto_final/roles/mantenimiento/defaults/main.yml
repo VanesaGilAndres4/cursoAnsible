@@ -1,0 +1,5 @@
+---
+paquetes_basicos: 
+  - htop
+  - curl
+  - tree

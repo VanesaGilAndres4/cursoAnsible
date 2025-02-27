@@ -1,0 +1,13 @@
+---
+- name: Crear usuario administrador
+  user: 
+    name: "{{ usuario_admin }}"
+    state: present
+    groups: "{{ usuario_grupo }}"
+    shell: "{{ usuario_shell }}"
+
+- name: Crear usuario estandar
+  user: 
+    name: "{{ usuario_estandar }}"
+    state: present
+    shell: "{{ usuario_shell }}"

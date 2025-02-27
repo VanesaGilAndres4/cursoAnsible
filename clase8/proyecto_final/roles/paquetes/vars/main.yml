@@ -1,0 +1,3 @@
+---
+directorio_temporal: /tmp/*
+directorio_logs: /var/log/*

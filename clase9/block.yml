@@ -9,6 +9,12 @@
         file: 
           path: /tmp/ejemplo_block
           state: present
+      - block:
+        - name: Crear un archivo dentro del directorio
+          file: 
+            path: /tmp/ejemplo_block/javi.txt
+            state: touch
+          
       - name: Crear un archivo dentro del directorio
         file: 
           path: /tmp/ejemplo_block/archivo.txt

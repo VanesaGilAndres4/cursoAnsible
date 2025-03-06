@@ -6,11 +6,15 @@
   tasks: 
     - block: 
       - name: Forzar un fallo intencional
-        command: /bin/false
+        #command: /bin/false
+        debug: 
+          msg: "Todo OK Jose Luis."
+          
       rescue: 
         - name: Ejecutar tarea de recuperacion
             debug: 
               msg: "Se ha producido un error, ejecutando recuperacion."
+
       always:
         - name: Esta tarea siempre se ejecuta
           debug:

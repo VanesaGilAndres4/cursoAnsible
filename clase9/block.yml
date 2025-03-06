@@ -1,0 +1,16 @@
+---
+- name: Ejemplo de pre-task y post-task
+  hosts: all
+  become: true
+
+  tasks: 
+    - block:
+      - name: Crear un directorio
+        file: 
+          path: /tmp/ejemplo_block
+          state: present
+      - name: Crear un archivo dentro del directorio
+        file: 
+          path: /tmp/ejemplo_block/archivo.txt
+          state: touch
+      when: ansible_os_family == "Debian"

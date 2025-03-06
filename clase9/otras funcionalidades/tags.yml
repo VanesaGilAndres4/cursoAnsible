@@ -12,10 +12,16 @@
 
       rescue: 
         - name: Ejecutar tarea de recuperacion
-            debug: 
-              msg: "Se ha producido un error, ejecutando recuperacion."
+          debug: 
+            msg: "Se ha producido un error, ejecutando recuperacion."
 
       always:
         - name: Esta tarea siempre se ejecuta
           debug:
             msg: "Esta tarea se ejecuta siempre."
+    
+    - name: sistema
+      debug: 
+        var: ansible_distribution
+      tags: 
+        - etiqueta

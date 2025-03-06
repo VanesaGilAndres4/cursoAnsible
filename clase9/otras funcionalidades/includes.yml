@@ -1,0 +1,6 @@
+---
+- name: Ejemplo de rescue y always
+  hosts: all
+  become: true
+  tasks:
+    include_tasks: 

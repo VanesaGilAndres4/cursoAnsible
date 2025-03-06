@@ -1,0 +1,19 @@
+---
+- name: Ejemplo de pre-task y post-task
+  hosts: all
+  become: true
+
+  pre_tasks:
+    - name: Validar si el sistema está actualizado
+      apt: 
+        update_cache: yes
+        
+  tasks: 
+    - name: Instalar Apache
+      apt: 
+        name: apache2
+        state: present
+  
+  post_tasks: 
+    - name: Mostrar estadol del servicio Apache
+      command: systemctl status apache2

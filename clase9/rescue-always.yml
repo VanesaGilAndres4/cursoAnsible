@@ -1,0 +1,17 @@
+---
+- name: Ejemplo de rescue y always
+  hosts: all
+  become: true
+
+  tasks: 
+    - block: 
+      - name: Forzar un fallo intencional
+        command: /bin/false
+      rescue: 
+        - name: Ejecutar tarea de recuperacion
+            debug: 
+              msg: "Se ha producido un error, ejecutando recuperacion."
+      always:
+        - name: Esta tarea siempre se ejecuta
+          debug:
+            msg: "Esta tarea se ejecuta siempre."

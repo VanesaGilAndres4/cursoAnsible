@@ -1,0 +1,12 @@
+---
+- name: Nombre descriptivo del playbook
+  hosts: grupo_de_hosts
+  tasks: 
+    - name: Tarea 1
+      modulo:
+        parametro1:
+        parametro2:
+    - name: 
+      modulo: 
+        parametro1: 
+        parametro2:

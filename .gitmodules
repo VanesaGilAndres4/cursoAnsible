@@ -1,0 +1,3 @@
+[submodule "/mnt/c/Users/zc03207/Repositorios/cursoAnsible/Submodules"]
+	path = /mnt/c/Users/zc03207/Repositorios/cursoAnsible/Submodules
+	url = https://github.com/VanesaGilAndres4/awx-test.git

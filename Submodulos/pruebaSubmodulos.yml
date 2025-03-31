@@ -1,12 +1,6 @@
 ---
-- name: Nombre descriptivo del playbook
-  hosts: grupo_de_hosts
-  tasks: 
-    - name: Tarea 1
-      modulo:
-        parametro1:
-        parametro2:
-    - name: 
-      modulo: 
-        parametro1: 
-        parametro2:
+- name: Playbook principal que incluye playbook del submódulo
+  hosts: localhost
+  tasks:
+    - name: Incluir playbook del submódulo
+      import_playbook: submodulos/awx-test/pruebaApt.yml

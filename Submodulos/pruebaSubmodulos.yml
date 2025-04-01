@@ -6,4 +6,4 @@
       debug:
         msg: "Este es el playbook principal"
     - name: Incluir tareas del submódulo
-      import_tasks: Submodules/awx-test/pruebaApt.yml
+      import_tasks: ../Submodules/pruebaApt.yml

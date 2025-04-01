@@ -2,5 +2,9 @@
 - name: Playbook principal que incluye playbook del submódulo
   hosts: localhost
   tasks:
-    - name: Incluir playbook del submódulo
-      import_playbook: submodulos/awx-test/pruebaApt.yml
+    - name: Tarea en el playbook principal
+      debug:
+        msg: "Este es el playbook principal"
+    
+    - name: Incluir tareas del submódulo (si es necesario)
+      include_tasks: submodulos/awx-test/pruebaApt.yml

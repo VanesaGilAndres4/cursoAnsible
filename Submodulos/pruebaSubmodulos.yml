@@ -1,6 +1,6 @@
 ---
 - name: Playbook principal que incluye playbook del submódulo
-  hosts: localhost
+  hosts: "{{ ansible_limit }}"
   tasks:
     - name: Tarea en el playbook principal
       debug:

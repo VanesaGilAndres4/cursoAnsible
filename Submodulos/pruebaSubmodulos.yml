@@ -1,9 +1,0 @@
----
-- name: Playbook principal que incluye playbook del submódulo
-  hosts: localhost
-  tasks:
-    - name: Tarea en el playbook principal
-      debug:
-        msg: "Este es el playbook principal"
-    - name: Incluir tareas del submódulo
-      import_tasks: ../Submodules/pruebaPing.yml
